@@ -1,0 +1,114 @@
+#announcerDate{
+    font-size: 50px;
+    font-weight: bold;
+}
+#sommaireTitle{
+    font-size: 30px;
+}
+
+
+#content2{
+    z-index: 900;
+    font-size: 40px;
+    height: 200%;
+    margin: auto;
+    margin-top: 70px;
+    max-width: none
+}
+#sommaire::-webkit-scrollbar {
+    width: 10px;
+    margin-left: 20px;
+  }
+  #sommaire::-webkit-scrollbar-track {
+    border-radius: 15px;
+  }
+  #sommaire::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 15px;
+  }
+  #sommaire::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+#announcer{
+    background-color: #EDEDED;
+    width: 100%;
+    padding-bottom: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+}
+#archiveList{
+    margin: auto;
+    height: 100%;
+    background-color: white;
+    padding-top: 40px;
+    box-shadow: 0px 1px 5px black;
+
+}
+#archiveInner{
+    text-align: center;
+    margin: auto;
+    max-width: 1000px;
+    
+}
+.preview{
+    width: 150px;
+    box-shadow: 0 25.6px 57.6px 0 rgba(0, 0, 0, 0.22), 0 4.8px 14.4px 0 rgba(0, 0, 0, 0.18);
+}
+.numberTitle{
+    font-size: 25px;
+    color: black;
+
+}
+.numberTitle:hover{
+    color: black;
+}
+#announcerContent{
+    height: 500px;
+    padding-top: 20px;
+    margin: auto;
+    max-width: 1000px;
+    border: none;
+
+}
+#announcerCover{
+    height: 100%;
+    float: left;
+    margin-right: 20px;
+
+}
+#sommaire{
+    font-size: 25px;
+    margin-right: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: whitesmoke;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    border: 1px solid grey;
+    height: 50%;
+    overflow-x: visible;
+    overflow-y: scroll;
+}
+.numberTitle{
+    margin-top: 15px;
+}
+.numberTitle:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.downloadButton{
+    margin-top: 20px;
+    font-size: 30px;
+    width: 30%;
+    height: 15%;
+    border-radius: 15px;
+    background-color: #fefefe;
+    outline: none;
+}
+.downloadButton:hover{
+    transform: scale(1.03);
+}
+.downloadButton:active{
+    transform: scale(0.99);
+}

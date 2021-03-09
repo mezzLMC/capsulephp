@@ -1,0 +1,8 @@
+Options -MultiViews
+RewriteEngine On
+RewriteRule blog blog.php
+RewriteRule presentation presentation.php
+RewriteRule contact contact.php
+RewriteRule archives archives.php
+RewriteRule archives/([0-9]) archives.php?number=$1
+RewriteRule article/(.*) article.php?url=$1

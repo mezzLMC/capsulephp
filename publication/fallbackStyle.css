@@ -1,0 +1,35 @@
+#title1{
+    width: 100%;
+    text-align: center;
+    font-size: 120px;
+}
+#title2{
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+}
+#paragraphe{
+    font-size: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    width: 1400px;
+    margin-bottom: 70px;
+}
+#capsule{
+    font-size: 80px;
+}
+@media screen 
+and (min-device-width: 1200px) 
+and (max-device-width: 1600px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+    #title1{
+         font-size: 85px;
+    }
+    #paragraphe{
+         font-size: 30px;
+         width: 95%;
+         margin: auto;
+         margin-bottom: 70px;
+         text-align: center;
+    }
+}

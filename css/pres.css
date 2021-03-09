@@ -1,0 +1,129 @@
+#container{
+    background-color: white;
+    margin: auto;
+    padding: 25px;
+    max-width: 1400px;
+    height: 1600px;
+    box-shadow: 0 4px 12px 0px rgba(0,0,0,.25);
+}
+#text{
+    font-size: 30px;
+    margin-left: 20px;
+    padding-right: 50px;
+    top: 20px;
+}
+div + p{
+    text-align: left;
+}
+#personnal{
+    margin-top: 50px;
+    
+}
+.imageHolder{
+    border-radius: 100%;
+    width:  300px;
+    height: 300px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 10px;
+}
+.name{
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+}
+.description{
+    font-size: 22px;
+    text-align: center;
+}
+.presentation{
+    height: 700px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 25.6px 57.6px 0 rgba(0, 0, 0, 0.22), 0 4.8px 14.4px 0 rgba(0, 0, 0, 0.18);
+}
+#conclusion{
+    top : 900px;
+    position: relative;
+    font-size: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+
+}
+.stack{
+    position: relative;
+    top: 400px;
+}
+  .card {
+    width: 60%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    font-family: sans-serif;
+    font-size: 15px;
+    box-shadow: 0 5px 10px 0 #00000040, 0 15px 20px 0#00000020;
+    transition: transform 200ms;
+  }
+
+
+  
+  .card:nth-last-child(2) {
+    --y: calc(-50%);
+    transform: translate(-50%, var(--y)) scale(1);
+  }
+  .card:nth-last-child(1) {
+    --y: calc(-50% + 50px);
+    transform: translate(-50%, var(--y)) scale(1.05);
+  }
+  
+  @keyframes swap {
+    50% {
+      transform: translate(-50%, calc(var(--y) - 250px)) scale(0.85) rotate(-5deg);
+      animation-timing-function: ease-in;
+    }
+    100% {
+      transform: translate(-50%, calc(var(--y) - 15px)) scale(0.85);
+      z-index: -1;
+    }
+  }
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
+    #container{
+        min-width: 1200px;
+        height: 1300px;
+    }
+    #text{
+        font-size: 22px;
+    }
+    #personnal{
+    margin-top: -50px;
+    height: 20%;
+    }
+    .description{
+    font-size: 18px;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+    .imageHolder{
+        width: 250px;
+        height: 250px;
+    }
+    .presentation{
+        height: 600px;
+    }
+    .stack{
+        position: relative;
+        top: 300px;
+    }
+    #conclusion{
+        top: 700px;
+    }
+}
