@@ -20,12 +20,11 @@ function article($article){
     <a href="/article/'. $article["url"]  . '"><p class="articleTitle">' . $article["titre"] .'</p></a>
   </div>
 </div>';
+
   }
-$bonusList = $local->query("SELECT * FROM articles WHERE data_function='bonus'");
 $bonusList = file_get_contents("https://lacapsuleapi.herokuapp.com/articles?fonction_eq=bonus&_sort=id:DESC");
 $bonusList = json_decode($bonusList,TRUE);
 
-$articleList = $local->query("SELECT * FROM articles WHERE data_function='article'");
 $articleList = file_get_contents("https://lacapsuleapi.herokuapp.com/articles?fonction_eq=article&_sort=id:DESC");
 $articleList = json_decode($articleList,TRUE);
 ?>
