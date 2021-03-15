@@ -32,3 +32,5 @@ function slug($str){
   return mb_strtolower(preg_replace(array('/[^a-zA-Z0-9 \'-]/', '/[ -\']+/', '/^-|-$/'),
   array('', '-', ''), remove_accent($str)));
 }
+
+echo slug("Au-fond-de-la-pénombre---Kaïto-Bernhart");

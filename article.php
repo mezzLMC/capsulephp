@@ -6,7 +6,7 @@ function article($bonus){
     return '<div class="bonus container">
         <div class="bonusBody container col">
           <div><img src="'. $bonus["miniature"] .'" alt="" class="bonusImg"></img></div>
-          <div class="bonusTitleDiv"><p class="bonusTitle"><a href="https://youtube.com">'.  $bonus["titre"] .'</a></p></div>
+          <div class="bonusTitleDiv"><p class="bonusTitle"><a href="/article/' . $bonus["url"]  . '">'.  $bonus["titre"] .'</a></p></div>
         </div>
       </div>
       <hr>';
@@ -55,7 +55,7 @@ if(count($similar)>4){
                     </div>';
                 }
                 ?>
-                <?php require('./publication/' . $content . ".html") ?>
+                <?php include('./publication/' . $content . ".html") ?>
                 <style>
                     <?php if($content=="fallback"){echo(include('/css/fallbackStyle.css'));} ?>
                 </style>
