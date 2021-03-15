@@ -5,8 +5,8 @@ require('./tools/markdown.php');
 
 function archive($element){
     return '<div class="col-sm">
-    <img class="preview" src='. "https://lacapsuleapi.herokuapp.com" . $element["cover"]["formats"]["large"]["url"] .' alt="numéro pilote"/><br />
-    <p class="numberTitle" >'. $element["name"] .'</p  >
+    <img class="preview" src=' . $element["cover"] .' alt="numéro pilote"/><br />
+    <a href="'. $element["numero"] .'"><p class="numberTitle" >'. $element["name"] .'</p  ></a>
   </div>';
 }
 
@@ -27,10 +27,10 @@ else{
   $n = array_key_first($list);
 }
 
-$announcerCover = "https://lacapsuleapi.herokuapp.com" . $list[$n]["cover"]["formats"]["medium"]["url"];
+$announcerCover = $list[$n]["cover"];
 $announcerDate = $list[$n]["name"];
 $announcerSummary = Markdown($list[$n]["sommaire"]);
-$announcerFile = "https://lacapsuleapi.herokuapp.com" . $list[$n]["pdf"][0]["url"];
+$announcerFile = $list[$n]["pdf"];
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -49,7 +49,7 @@ $announcerFile = "https://lacapsuleapi.herokuapp.com" . $list[$n]["pdf"][0]["url
         <div>
           <div id="announcer" class="row">
             <div id="announcerContent" class="container row">
-              <div class="container col-sm" style="flex-grow: 0;"><img src="/cover/fevrier.png" alt="announcerCover" id="announcerCover"/></div>
+              <div class="container col-sm" style="flex-grow: 0;"><img src="<?= $announcerCover?> " alt="announcerCover" id="announcerCover"/></div>
               <div class="container col">
               <span id="announcerDate" class="row"><?= $announcerDate ?></span>
               <span id="sommaireTitle">Sommaire:</span>
